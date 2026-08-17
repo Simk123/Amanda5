@@ -1,0 +1,6 @@
+{
+  "name": "Amanda's 5-Year Anniversary Collection",
+  "description": "An infinite collaborative board of team-crafted beaded charms, personalized milestone tributes, and heartfelt letters celebrating Amanda's 5-year work anniversary.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

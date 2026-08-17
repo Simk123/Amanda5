@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Bookmania';
+  src: url('/Bookmania-Light.otf') format('opentype');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Bookmania', 'Newsreader', 'Georgia', serif;
+  }
+  .font-stamp-title {
+    font-family: 'Bookmania', 'Cinzel', 'Times New Roman', serif;
+  }
+  .font-postmark {
+    font-family: 'Space Mono', monospace;
+  }
+  .font-typewriter {
+    font-family: 'Courier Prime', monospace;
+  }
+  .font-body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Authentic Postage Stamp Perforations */
+.stamp-perforated {
+  background-color: #ffffff;
+  position: relative;
+  /* Filter dropshadow around perforations */
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.45));
+}
+
+/* Paper grain overlay texture */
+.paper-grain {
+  background-color: #e5e3dc;
+  background-image: radial-gradient(#d3cfc4 1px, transparent 1px), radial-gradient(#d3cfc4 1px, #e5e3dc 1px);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+.deckle-edge {
+  box-shadow: 
+    0 1px 2px rgba(0,0,0,0.07), 
+    0 2px 4px rgba(0,0,0,0.07), 
+    0 4px 8px rgba(0,0,0,0.07), 
+    0 8px 16px rgba(0,0,0,0.07),
+    0 16px 32px rgba(0,0,0,0.07);
+}
+
+/* Perforated cutout circles via CSS mask/SVG */
+.stamp-edge-holes {
+  mask: radial-gradient(circle 5px at 10px 10px, transparent 4.5px, black 5px);
+}
+
+/* Cancellation Postmark Wave Lines */
+.postmark-wavy {
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 4px,
+    currentColor 4px,
+    currentColor 6px
+  );
+}
+
+/* Hide scrollbars for clean full canvas experience */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
